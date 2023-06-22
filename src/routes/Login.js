@@ -7,7 +7,7 @@ const Login = () => {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [token, setToken] = useOutletContext();
+  const [setToken] = useOutletContext();
   const navigate = useNavigate();
 
   async function submitLogin(event) {
@@ -43,6 +43,8 @@ const Login = () => {
     <div className="login mt-4" style={{ height: "100vh" }}>
 
       <h1>Login</h1>
+
+      <p>{errorMessage}</p>
 
       <Form onSubmit={submitLogin} style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "120px" }}>
 

@@ -52,6 +52,8 @@ const Register = () => {
 
       <h1>Register</h1>
 
+      <p>{errorMessage}</p>
+
       <Form onSubmit={submitRegistration} style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "120px" }}>
 
         <Form.Group>
