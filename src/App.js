@@ -6,7 +6,7 @@ import {
 import './App.css';
 import NotFound from "./components/NotFound";
 import Root from "./routes/Root";
-import Home from "./routes/Home";
+// import Home from "./components/Home";
 import Register from "./routes/Register";
 import Login from "./routes/Login";
 import Profile from "./routes/Profile";
@@ -19,10 +19,10 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <NotFound />,
     children: [
-      {
-        path: "home",
-        element: <Home />
-      },
+      // {
+      //   path: "home",
+      //   element: <Home />
+      // },
       {
         path: "login",
         element: <Login />

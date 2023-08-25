@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import Home from "../components/Home";
 
 export default function Root() {
 
@@ -24,7 +25,7 @@ export default function Root() {
 
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand as={Link} to="home" className="d-flex align-items-center" style={{ fontFamily: 'Arial', color: '#444' }}>
+            <Navbar.Brand as={Link} to="/" className="d-flex align-items-center" style={{ fontFamily: 'Arial', color: '#444' }}>
               <FontAwesomeIcon icon={faHouse} className="house-icon" />
               <span className="ms-2">Fitness Trackr</span>
             </Navbar.Brand>
@@ -57,7 +58,7 @@ export default function Root() {
       >
         
         <Outlet context={[token, setToken]}/>
-
+        <Home token={token} setToken={setToken}/>
       </main>
 
     </div>

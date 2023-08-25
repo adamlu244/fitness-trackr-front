@@ -1,10 +1,10 @@
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 import { Card, Container } from "react-bootstrap";
 import jwtDecode from "jwt-decode";
 
-const Home = () => {
+const Home = ({ token, setToken }) => {
 
-  const [token] = useOutletContext();
+  // const [token] = useOutletContext();
 
   if (token) {
     const { username } = jwtDecode(token);
